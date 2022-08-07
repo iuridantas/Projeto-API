@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const routes = require('./src/routes/teamsbrazilian2022.route')
+const routes = require('./src/routes/teamsbrazilian2022.route');
 
 const port = 3000;
 const app = express();

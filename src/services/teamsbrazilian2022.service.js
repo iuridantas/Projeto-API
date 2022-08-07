@@ -206,10 +206,38 @@ const findALLteamsbrazilian2022service = () => {
 };
 
 const findByIdteambrazilian2022service = (idParam) => {
-    return teamsbrazilian2022.find((teamsbrazilian2022) => teamsbrazilian2022.id === idParam);
+  return teamsbrazilian2022.find(
+    (teamsbrazilian2022) => teamsbrazilian2022.id === idParam,
+  );
 };
 
-module.exports ={
-    findALLteamsbrazilian2022service,
-    findByIdteambrazilian2022service,
+const createteamsbrazilian2022service = (newteamsbrazilian2022) => {
+  const newId = teamsbrazilian2022.length + 1;
+  newteamsbrazilian2022.id = newId;
+  teamsbrazilian2022.push(newteamsbrazilian2022);
+  return newteamsbrazilian2022;
+};
+
+const updateteamsbrazilian2022service = (idParam, teamsbrazilian2022Edit) => {
+  teamsbrazilian2022Edit['id'] = idParam;
+  const teamsbrazilian2022Index = teamsbrazilian2022.findIndex(
+    (teamsbrazilian2022) => teamsbrazilian2022.id == idParam,
+  );
+  teamsbrazilian2022[teamsbrazilian2022Index] = teamsbrazilian2022Edit;
+  return teamsbrazilian2022Edit;
+};
+
+const deleteteamsbrazilian2022service = (idParam) => {
+  const teamsbrazilian2022Index = teamsbrazilian2022.findIndex(
+    (teamsbrazilian2022) => teamsbrazilian2022.id == idParam,
+  );
+  return teamsbrazilian2022.splice(teamsbrazilian2022Index, 1);
+};
+
+module.exports = {
+  findALLteamsbrazilian2022service,
+  findByIdteambrazilian2022service,
+  createteamsbrazilian2022service,
+  updateteamsbrazilian2022service,
+  deleteteamsbrazilian2022service,
 };
