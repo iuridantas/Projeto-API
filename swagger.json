@@ -20,7 +20,7 @@
     }
   ],
   "paths": {
-    "/": {
+    "/characters": {
       "get": {
         "summary": "Lista de todos os times",
         "description": "Rota responsável por listar todos os times",
@@ -45,7 +45,7 @@
         }
       }
     },
-    "/find/{id}": {
+    "/characters/find/{id}": {
       "get": {
         "summary": "Busca um time pelo ID",
         "description": "Rota responsável por buscar um time pelo ID",
@@ -76,7 +76,7 @@
         }
       }
     },
-    "/create": {
+    "/characters/create": {
       "post": {
         "summary": "Cadastrar um time",
         "description": "Rota responsável por cadastrar um time",
@@ -119,7 +119,7 @@
         }
       }
     },
-    "/update/{id}": {
+    "/characters/update/{id}": {
       "put": {
         "summary": "Editar um time pelo ID",
         "description": "Rota responsável por editar um time pelo ID",
@@ -170,7 +170,7 @@
         }
       }
     },
-    "/delete/{id}": {
+    "/characters/delete/{id}": {
       "delete": {
         "summary": "Apagar um time pelo ID",
         "description": "Rota responsável por apagar um time pelo ID",
@@ -193,7 +193,7 @@
         }
       }
     },
-    "/search": {
+    "/characters/search": {
       "get": {
         "summary": "Busca um time pelo nome",
         "description": "Rota responsável por buscar um time pelo nome",
