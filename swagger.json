@@ -92,7 +92,7 @@
                   "value": {
                     "name": "América Futebol Clube",
                     "foundation": 1912,
-                    "shield": "../../assets/shields/america.png",
+                    "shield": "https://s.sde.globo.com/media/organizations/2019/02/28/America-MG-VERDE-fev2019-01.svg",
                     "mascot": "Coelho",
                     "localization": "Belo Horizonte"
                   }
@@ -143,7 +143,7 @@
                   "value": {
                     "name": "América Futebol Clube editado",
                     "foundation": 1912,
-                    "shield": "../../assets/shields/america.png",
+                    "shield": "https://s.sde.globo.com/media/organizations/2019/02/28/America-MG-VERDE-fev2019-01.svg",
                     "mascot": "Coelho",
                     "localization": "Belo Horizonte"
                   }

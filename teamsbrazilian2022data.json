@@ -2,140 +2,140 @@
     {
       "name": "América Futebol Clube",
       "foundation": 1912,
-      "shield": "../../assets/shields/america.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2019/02/28/America-MG-VERDE-fev2019-01.svg",
       "mascot": "Coelho",
       "localization": "Belo Horizonte"
     },
     {
       "name": "Club Athletico Paranaense",
       "foundation": 1924,
-      "shield": "../../assets/shields/athletico.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2019/09/09/Athletico-PR.svg",
       "mascot": "Furacão",
       "localization": "Curitiba"
     },
     {
       "name": "Atlético Clube Goianiense",
       "foundation": 1937,
-      "shield": "../../assets/shields/atletico-go.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2020/07/02/atletico-go-2020.svg",
       "mascot": "Dragão",
       "localization": "Goiânia"
     },
     {
       "name": "Clube Atlético Mineiro",
       "foundation": 1908,
-      "shield": "../../assets/shields/atletico-mg.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
       "mascot": "Galo",
       "localization": "Belo Horizonte"
     },
     {
       "name": "Avaí Futebol Clube",
       "foundation": 1923,
-      "shield": "../../assets/shields/avai.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2018/09/04/avai-futebol-clube.svg",
       "mascot": "Leão",
       "localization": "Florianópolis"
     },
     {
       "name": "Botafogo de Futebol e Regatas",
       "foundation": 1904,
-      "shield": "../../assets/shields/botafogo.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
       "mascot": "Biriba",
       "localization": "Rio de Janeiro"
     },
     {
       "name": "Red Bull Bragantino",
       "foundation": 1928,
-      "shield": "../../assets/shields/bragantino.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
       "mascot": "Leão",
       "localization": "Bragança Paulista"
     },
     {
       "name": "Ceará Sporting Club",
       "foundation": 1914,
-      "shield": "../../assets/shields/ceara.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2019/10/10/ceara.svg",
       "mascot": "Vovô",
       "localization": "Fortaleza"
     },
     {
       "name": "Sport Club Corinthians Paulista",
       "foundation": 1910,
-      "shield": "../../assets/shields/corinthians.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2019/09/30/Corinthians.svg",
       "mascot": "Mosqueteiro",
       "localization": "São Paulo"
     },
     {
       "name": "Coritiba Foot Ball Club",
       "foundation": 1909,
-      "shield": "../../assets/shields/coritiba.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
       "mascot": "Vovô Coxa",
       "localization": "Curitiba"
     },
     {
       "name": "Cuiabá Esporte Clube",
       "foundation": 2001,
-      "shield": "../../assets/shields/cuiaba.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2018/12/26/Cuiaba_EC.svg",
       "mascot": "Peixe Dourado",
       "localization": "Cuiabá"
     },
     {
       "name": "Clube de Regatas do Flamengo",
       "foundation": 1895,
-      "shield": "../../assets/shields/flamengo.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2018/04/10/Flamengo-2018.svg",
       "mascot": "Urubu",
       "localization": "Rio de Janeiro"
     },
     {
       "name": "Fluminense Football Club",
       "foundation": 1902,
-      "shield": "../../assets/shields/fluminense.png",
+      "shield": ".https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
       "mascot": "Guerreirinho",
       "localization": "Rio de Janeiro"
     },
     {
       "name": "Fortaleza Esporte Clube",
       "foundation": 1918,
-      "shield": "../../assets/shields/fortaleza.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2021/09/19/Fortaleza_2021_1.svg",
       "mascot": "Leão",
       "localization": "Fortaleza"
     },
     {
       "name": "Goiás Esporte Clube",
       "foundation": 1943,
-      "shield": "../../assets/shields/goias.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2021/03/01/GOIAS-2021.svg",
       "mascot": "Periquito",
       "localization": "Goiânia"
     },
     {
       "name": "Sport Club Internacional",
       "foundation": 1909,
-      "shield": "../../assets/shields/internacional.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
       "mascot": "Saci",
       "localization": "Porto Alegre"
     },
     {
       "name": "Esporte Clube Juventude",
       "foundation": 1913,
-      "shield": "../../assets/shields/juventude.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2021/04/29/Juventude-2021-01.svg",
       "mascot": "Periquito",
       "localization": "Caxias do Sul"
     },
     {
       "name": "Sociedade Esportiva Palmeiras",
       "foundation": 1914,
-      "shield": "../../assets/shields/palmeiras.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
       "mascot": "Porco",
       "localization": "São Paulo"
     },
     {
       "name": "Santos Futebol Clube",
       "foundation": 1912,
-      "shield": "../../assets/shields/santos.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
       "mascot": "Baleia",
       "localization": "Santos"
     },
     {
       "name": "São Paulo Futebol Clube",
       "foundation": 1930,
-      "shield": "../../assets/shields/saopaulo.png",
+      "shield": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
       "mascot": "Santo Paulo",
       "localization": "São Paulo"
     }
