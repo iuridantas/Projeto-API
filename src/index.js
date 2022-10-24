@@ -1,7 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const routes = require('./serieA/teamsbrazilian2022.route');
+const routesSerieA = require('./serieA/teamsbrazilian2022SerieA.route');
+const routesSerieB = require('./serieB/teamsbrazilian2022SerieB.route');
 const routesUsers = require('./users/users.routes');
 const authroute = require('./auth/auth.routes');
 const connecttodatabase = require('./database/database');
@@ -13,7 +14,8 @@ connecttodatabase();
 
 app.use(express.json());
 app.use(cors());
-app.use('/', routes);
+app.use('/', routesSerieA);
+app.use('/', routesSerieB)
 app.use('/users', routesUsers);
 app.use('/auth', authroute);
 

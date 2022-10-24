@@ -98,7 +98,7 @@
     },
     "/auth/login": {
       "post": {
-        "summary": "Login na API Rick and Morty",
+        "summary": "Login na API",
         "description": " Rota responsável pelo login",
         "tags": ["Auth"],
         "requestBody": {
@@ -333,6 +333,228 @@
         "summary": "Busca um time pelo nome",
         "description": "Rota responsável por buscar um time pelo nome",
         "tags": ["Serie A"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/serieb": {
+      "get": {
+        "summary": "Lista de todos os times",
+        "description": "Rota responsável por listar todos os times",
+        "tags": ["Serie B"],
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "200": {
+            "description": "ok",
+            "content": {
+              "appliation/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/teamsbrazilian2022"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/serieb/find/{id}": {
+      "get": {
+        "summary": "Busca um time pelo ID",
+        "description": "Rota responsável por buscar um time pelo ID",
+        "tags": ["Serie B"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/serieb/create": {
+      "post": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Cadastrar um time",
+        "description": "Rota responsável por cadastrar um time",
+        "tags": ["Serie B"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Rickandmortys": {
+                  "value": {
+                    "name": "Cruzeiro Esporte Clube",
+                    "foundation": 1921,
+                    "shield": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
+                    "mascot": "Raposa",
+                    "localization": "Belo Horizonte"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/serieb/update/{id}": {
+      "put": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Editar um time pelo ID",
+        "description": "Rota responsável por editar um time pelo ID",
+        "tags": ["Serie B"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Paletas": {
+                  "value": {
+                    "name": "Cruzeiro Esporte Clube editado",
+                    "foundation": 1921,
+                    "shield": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
+                    "mascot": "Raposa",
+                    "localization": "Belo Horizonte"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/serieb/delete/{id}": {
+      "delete": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Apagar um time pelo ID",
+        "description": "Rota responsável por apagar um time pelo ID",
+        "tags": ["Serie B"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para deleção",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/serieb/search": {
+      "get": {
+        "summary": "Busca um time pelo nome",
+        "description": "Rota responsável por buscar um time pelo nome",
+        "tags": ["Serie B"],
         "parameters": [
           {
             "in": "query",

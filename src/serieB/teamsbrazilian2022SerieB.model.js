@@ -1,6 +1,6 @@
 const mongooose = require('mongoose');
 
-const teamsbrazilian2022Schema = new mongooose.Schema({
+const teamsbrazilian2022SerieASchema= new mongooose.Schema({
   name: { type: String, required: true },
   foundation: { type: Number, required: true },
   shield: { type: String, required: true },
@@ -8,6 +8,6 @@ const teamsbrazilian2022Schema = new mongooose.Schema({
   localization: { type: String, required: true },
 });
 
-const teamsbrazilian2022 = mongooose.model('teamsbrazilian2022',teamsbrazilian2022Schema,);
+const teamsbrazilian2022SerieB = mongooose.model('Serie_B',teamsbrazilian2022SerieASchema,);
 
-module.exports = teamsbrazilian2022;
+module.exports = teamsbrazilian2022SerieB;

@@ -14,6 +14,6 @@ UsersSchema.pre('save', async function (next) {
   next();
 });
 
-const Users = mongooose.model('users', UsersSchema);
+const Users = mongooose.model('Users', UsersSchema);
 
 module.exports = Users;
