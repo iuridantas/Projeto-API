@@ -20,11 +20,131 @@
     }
   ],
   "paths": {
-    "/characters": {
+    "/users/create": {
+      "post": {
+        "summary": "Criar novo usuário",
+        "description": "Rota responsável por criar novo usuário",
+        "tags": ["User"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Users"
+              },
+              "examples": {
+                "Users": {
+                  "value": {
+                    "name": "Iuri Dantas",
+                    "username": "IuriDantas",
+                    "email": "uri.dantas@hotmail.com",
+                    "password": "blueed",
+                    "photo": "https://avatars.githubusercontent.com/u/88010013?v=4"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/Users"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Lista de todos os usuários",
+        "description": "Rota responsável por listar todos os usuários",
+        "tags": ["User"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Users"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "summary": "Login na API Rick and Morty",
+        "description": " Rota responsável pelo login",
+        "tags": ["Auth"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Users"
+              },
+              "examples": {
+                "User": {
+                  "value": {
+                    "email": "uri.dantas@hotmail.com",
+                    "password": "blueed"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/seriea": {
       "get": {
         "summary": "Lista de todos os times",
         "description": "Rota responsável por listar todos os times",
-        "tags": ["Characters"],
+        "tags": ["Serie A"],
         "responses": {
           "404": {
             "description": "Not Found"
@@ -45,11 +165,11 @@
         }
       }
     },
-    "/characters/find/{id}": {
+    "/seriea/find/{id}": {
       "get": {
         "summary": "Busca um time pelo ID",
         "description": "Rota responsável por buscar um time pelo ID",
-        "tags": ["Characters"],
+        "tags": ["Serie A"],
         "parameters": [
           {
             "name": "id",
@@ -76,11 +196,16 @@
         }
       }
     },
-    "/characters/create": {
+    "/seriea/create": {
       "post": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "summary": "Cadastrar um time",
         "description": "Rota responsável por cadastrar um time",
-        "tags": ["Characters"],
+        "tags": ["Serie A"],
         "requestBody": {
           "content": {
             "application/json": {
@@ -119,11 +244,16 @@
         }
       }
     },
-    "/characters/update/{id}": {
+    "/seriea/update/{id}": {
       "put": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "summary": "Editar um time pelo ID",
         "description": "Rota responsável por editar um time pelo ID",
-        "tags": ["Characters"],
+        "tags": ["Serie A"],
         "parameters": [
           {
             "name": "id",
@@ -170,11 +300,16 @@
         }
       }
     },
-    "/characters/delete/{id}": {
+    "/seriea/delete/{id}": {
       "delete": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "summary": "Apagar um time pelo ID",
         "description": "Rota responsável por apagar um time pelo ID",
-        "tags": ["Characters"],
+        "tags": ["Serie A"],
         "parameters": [
           {
             "name": "id",
@@ -193,11 +328,11 @@
         }
       }
     },
-    "/characters/search": {
+    "/seriea/search": {
       "get": {
         "summary": "Busca um time pelo nome",
         "description": "Rota responsável por buscar um time pelo nome",
-        "tags": ["Characters"],
+        "tags": ["Serie A"],
         "parameters": [
           {
             "in": "query",
@@ -229,6 +364,13 @@
     }
   },
   "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
     "schemas": {
       "teamsbrazilian2022": {
         "type": "object",
@@ -246,6 +388,26 @@
             "type": "string"
           },
           "localization": {
+            "type": "string"
+          }
+        }
+      },
+      "Users": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "photo": {
             "type": "string"
           }
         }
