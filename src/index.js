@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const routes = require('./characters/teamsbrazilian2022.route');
+const routes = require('./serieA/teamsbrazilian2022.route');
 const routesUsers = require('./users/users.routes');
 const authroute = require('./auth/auth.routes');
 const connecttodatabase = require('./database/database');
