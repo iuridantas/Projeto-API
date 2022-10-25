@@ -215,11 +215,11 @@
               "examples": {
                 "Rickandmortys": {
                   "value": {
-                    "name": "América Futebol Clube",
-                    "foundation": 1912,
-                    "shield": "https://s.sde.globo.com/media/organizations/2019/02/28/America-MG-VERDE-fev2019-01.svg",
-                    "mascot": "Coelho",
-                    "localization": "Belo Horizonte"
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
                   }
                 }
               }
@@ -271,11 +271,11 @@
               "examples": {
                 "Paletas": {
                   "value": {
-                    "name": "América Futebol Clube editado",
-                    "foundation": 1912,
-                    "shield": "https://s.sde.globo.com/media/organizations/2019/02/28/America-MG-VERDE-fev2019-01.svg",
-                    "mascot": "Coelho",
-                    "localization": "Belo Horizonte"
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
                   }
                 }
               }
@@ -437,11 +437,11 @@
               "examples": {
                 "Rickandmortys": {
                   "value": {
-                    "name": "Cruzeiro Esporte Clube",
-                    "foundation": 1921,
-                    "shield": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
-                    "mascot": "Raposa",
-                    "localization": "Belo Horizonte"
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
                   }
                 }
               }
@@ -493,11 +493,11 @@
               "examples": {
                 "Paletas": {
                   "value": {
-                    "name": "Cruzeiro Esporte Clube editado",
-                    "foundation": 1921,
-                    "shield": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
-                    "mascot": "Raposa",
-                    "localization": "Belo Horizonte"
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
                   }
                 }
               }
@@ -659,11 +659,11 @@
               "examples": {
                 "Rickandmortys": {
                   "value": {
-                    "name": "Mirassol Futebol Clube",
-                    "foundation": 1925,
-                    "shield": "https://s.sde.globo.com/media/organizations/2019/01/08/mirassol-futebol-clube.svg",
-                    "mascot": "Leão",
-                    "localization": "Mirassol"
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
                   }
                 }
               }
@@ -715,11 +715,11 @@
               "examples": {
                 "Paletas": {
                   "value": {
-                    "name": "Mirassol Futebol Clube editado",
-                    "foundation": 1925,
-                    "shield": "https://s.sde.globo.com/media/organizations/2019/01/08/mirassol-futebol-clube.svg",
-                    "mascot": "Leão",
-                    "localization": "Mirassol"
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
                   }
                 }
               }
@@ -777,6 +777,1830 @@
         "summary": "Busca um time pelo nome",
         "description": "Rota responsável por buscar um time pelo nome",
         "tags": ["Serie C"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo1": {
+      "get": {
+        "summary": "Lista de todos os times",
+        "description": "Rota responsável por listar todos os times",
+        "tags": ["Serie D"],
+        "sub tags": ["Grupo 1"],
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "200": {
+            "description": "ok",
+            "content": {
+              "appliation/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/teamsbrazilian2022"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo1/find/{id}": {
+      "get": {
+        "summary": "Busca um time pelo ID",
+        "description": "Rota responsável por buscar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 1"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo1/create": {
+      "post": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Cadastrar um time",
+        "description": "Rota responsável por cadastrar um time",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 1"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Rickandmortys": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo1/update/{id}": {
+      "put": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Editar um time pelo ID",
+        "description": "Rota responsável por editar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 1"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Paletas": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo1/delete/{id}": {
+      "delete": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Apagar um time pelo ID",
+        "description": "Rota responsável por apagar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 1"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para deleção",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo1/search": {
+      "get": {
+        "summary": "Busca um time pelo nome",
+        "description": "Rota responsável por buscar um time pelo nome",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 1"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo2": {
+      "get": {
+        "summary": "Lista de todos os times",
+        "description": "Rota responsável por listar todos os times",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 2"],
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "200": {
+            "description": "ok",
+            "content": {
+              "appliation/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/teamsbrazilian2022"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo2/find/{id}": {
+      "get": {
+        "summary": "Busca um time pelo ID",
+        "description": "Rota responsável por buscar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 2"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo2/create": {
+      "post": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Cadastrar um time",
+        "description": "Rota responsável por cadastrar um time",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 2"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Rickandmortys": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo2/update/{id}": {
+      "put": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Editar um time pelo ID",
+        "description": "Rota responsável por editar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 2"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Paletas": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo2/delete/{id}": {
+      "delete": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Apagar um time pelo ID",
+        "description": "Rota responsável por apagar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 2"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para deleção",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo2/search": {
+      "get": {
+        "summary": "Busca um time pelo nome",
+        "description": "Rota responsável por buscar um time pelo nome",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 2"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo3": {
+      "get": {
+        "summary": "Lista de todos os times",
+        "description": "Rota responsável por listar todos os times",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 3"],
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "200": {
+            "description": "ok",
+            "content": {
+              "appliation/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/teamsbrazilian2022"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo3/find/{id}": {
+      "get": {
+        "summary": "Busca um time pelo ID",
+        "description": "Rota responsável por buscar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 3"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo3/create": {
+      "post": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Cadastrar um time",
+        "description": "Rota responsável por cadastrar um time",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 3"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Rickandmortys": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo3/update/{id}": {
+      "put": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Editar um time pelo ID",
+        "description": "Rota responsável por editar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 3"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Paletas": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo3/delete/{id}": {
+      "delete": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Apagar um time pelo ID",
+        "description": "Rota responsável por apagar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 3"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para deleção",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo3/search": {
+      "get": {
+        "summary": "Busca um time pelo nome",
+        "description": "Rota responsável por buscar um time pelo nome",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 3"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo4": {
+      "get": {
+        "summary": "Lista de todos os times",
+        "description": "Rota responsável por listar todos os times",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 4"],
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "200": {
+            "description": "ok",
+            "content": {
+              "appliation/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/teamsbrazilian2022"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo4/find/{id}": {
+      "get": {
+        "summary": "Busca um time pelo ID",
+        "description": "Rota responsável por buscar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 4"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo4/create": {
+      "post": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Cadastrar um time",
+        "description": "Rota responsável por cadastrar um time",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 4"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Rickandmortys": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo4/update/{id}": {
+      "put": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Editar um time pelo ID",
+        "description": "Rota responsável por editar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 4"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Paletas": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo4/delete/{id}": {
+      "delete": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Apagar um time pelo ID",
+        "description": "Rota responsável por apagar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 4"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para deleção",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo4/search": {
+      "get": {
+        "summary": "Busca um time pelo nome",
+        "description": "Rota responsável por buscar um time pelo nome",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 4"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo5": {
+      "get": {
+        "summary": "Lista de todos os times",
+        "description": "Rota responsável por listar todos os times",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 5"],
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "200": {
+            "description": "ok",
+            "content": {
+              "appliation/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/teamsbrazilian2022"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo5/find/{id}": {
+      "get": {
+        "summary": "Busca um time pelo ID",
+        "description": "Rota responsável por buscar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 5"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo5/create": {
+      "post": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Cadastrar um time",
+        "description": "Rota responsável por cadastrar um time",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 5"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Rickandmortys": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo5/update/{id}": {
+      "put": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Editar um time pelo ID",
+        "description": "Rota responsável por editar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 5"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Paletas": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo5/delete/{id}": {
+      "delete": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Apagar um time pelo ID",
+        "description": "Rota responsável por apagar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 5"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para deleção",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo5/search": {
+      "get": {
+        "summary": "Busca um time pelo nome",
+        "description": "Rota responsável por buscar um time pelo nome",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 5"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo6": {
+      "get": {
+        "summary": "Lista de todos os times",
+        "description": "Rota responsável por listar todos os times",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 6"],
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "200": {
+            "description": "ok",
+            "content": {
+              "appliation/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/teamsbrazilian2022"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo6/find/{id}": {
+      "get": {
+        "summary": "Busca um time pelo ID",
+        "description": "Rota responsável por buscar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 6"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo6/create": {
+      "post": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Cadastrar um time",
+        "description": "Rota responsável por cadastrar um time",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 6"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Rickandmortys": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo6/update/{id}": {
+      "put": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Editar um time pelo ID",
+        "description": "Rota responsável por editar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 6"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Paletas": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo6/delete/{id}": {
+      "delete": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Apagar um time pelo ID",
+        "description": "Rota responsável por apagar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 6"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para deleção",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo6/search": {
+      "get": {
+        "summary": "Busca um time pelo nome",
+        "description": "Rota responsável por buscar um time pelo nome",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 6"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo7": {
+      "get": {
+        "summary": "Lista de todos os times",
+        "description": "Rota responsável por listar todos os times",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 7"],
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "200": {
+            "description": "ok",
+            "content": {
+              "appliation/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/teamsbrazilian2022"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo7/find/{id}": {
+      "get": {
+        "summary": "Busca um time pelo ID",
+        "description": "Rota responsável por buscar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 7"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo7/create": {
+      "post": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Cadastrar um time",
+        "description": "Rota responsável por cadastrar um time",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 7"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Rickandmortys": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo7/update/{id}": {
+      "put": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Editar um time pelo ID",
+        "description": "Rota responsável por editar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 7"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Paletas": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo7/delete/{id}": {
+      "delete": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Apagar um time pelo ID",
+        "description": "Rota responsável por apagar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 7"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para deleção",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo7/search": {
+      "get": {
+        "summary": "Busca um time pelo nome",
+        "description": "Rota responsável por buscar um time pelo nome",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 7"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo8": {
+      "get": {
+        "summary": "Lista de todos os times",
+        "description": "Rota responsável por listar todos os times",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 8"],
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "200": {
+            "description": "ok",
+            "content": {
+              "appliation/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/teamsbrazilian2022"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo8/find/{id}": {
+      "get": {
+        "summary": "Busca um time pelo ID",
+        "description": "Rota responsável por buscar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 8"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo8/create": {
+      "post": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Cadastrar um time",
+        "description": "Rota responsável por cadastrar um time",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 8"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Rickandmortys": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo8/update/{id}": {
+      "put": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Editar um time pelo ID",
+        "description": "Rota responsável por editar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 8"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para a busca",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/teamsbrazilian2022"
+              },
+              "examples": {
+                "Paletas": {
+                  "value": {
+                    "name": "Nome do time",
+                    "foundation": 1,
+                    "shield": "Link da imagem do escudo",
+                    "mascot": "Nome do mascote",
+                    "localization": "Nome da localização"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/teamsbrazilian2022"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Seried/Grupo8/delete/{id}": {
+      "delete": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Apagar um time pelo ID",
+        "description": "Rota responsável por apagar um time pelo ID",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 8"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do time para deleção",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Seried/Grupo8/search": {
+      "get": {
+        "summary": "Busca um time pelo nome",
+        "description": "Rota responsável por buscar um time pelo nome",
+        "tags": ["Serie D"],
+        "subtags": ["Grupo 8"],
         "parameters": [
           {
             "in": "query",
