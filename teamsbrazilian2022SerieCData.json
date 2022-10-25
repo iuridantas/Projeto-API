@@ -1,0 +1,142 @@
+[
+    {
+      "name": "Mirassol Futebol Clube",
+      "foundation": 192,
+      "shield": "https://s.sde.globo.com/media/organizations/2019/01/08/mirassol-futebol-clube.svg",
+      "mascot": "Leão",
+      "localization": "Mirassol"
+    },
+    {
+      "name": "Paysandu Sport Club",
+      "foundation": 1914,
+      "shield": "https://s.sde.globo.com/media/organizations/2019/05/29/Paysandu.svg",
+      "mascot": "Lobo Mau",
+      "localization": "Belém"
+    },
+    {
+      "name": "Figueirense Futebol Clube",
+      "foundation": 1921,
+      "shield": "https://s.sde.globo.com/media/organizations/2018/03/11/figueirense.svg",
+      "mascot": "Furacão",
+      "localization": "Florianópolis"
+    },
+    {
+      "name": "Volta Redonda Futebol Clube",
+      "foundation": 1976,
+      "shield": "https://s.sde.globo.com/media/organizations/2021/04/27/Volta-Redonda-2020.svg",
+      "mascot": "Jaguatirica",
+      "localization": "Volta Redonda"
+    },
+    {
+      "name": "Botafogo Futebol Clube",
+      "foundation": 1918,
+      "shield": "https://s.sde.globo.com/media/organizations/2018/12/25/Botafogo-SP-RiberaoPreto.svg",
+      "mascot": "Pantera",
+      "localization": "Ribeirão Preto"
+    },
+    {
+      "name": "ABC Futebol Clube",
+      "foundation": 1915,
+      "shield": "https://s.sde.globo.com/media/organizations/2015/11/05/bc65.png",
+      "mascot": "Elefante",
+      "localization": "Natal"
+    },
+    {
+      "name": "Esporte Clube Vitória",
+      "foundation": 1899,
+      "shield": "https://s.sde.globo.com/media/organizations/2018/03/11/vitoria.svg",
+      "mascot": "Leão",
+      "localization": "Salvador"
+    },
+    {
+      "name": "Associação Atlética Aparecidense",
+      "foundation": 1985,
+      "shield": "https://s.sde.globo.com/media/organizations/2022/01/20/Aparecidense-65.png",
+      "mascot": "Camaleão",
+      "localization": "Aparecida de Goiânia"
+    },
+    {
+      "name": "Botafogo Futebol Clube",
+      "foundation": 1931,
+      "shield": "https://s.sde.globo.com/media/organizations/2020/02/12/botsvg.svg",
+      "mascot": "Xerife",
+      "localization": "João Pessoa"
+    },
+    {
+      "name": "Ypiranga Futebol Clube",
+      "foundation": 1924,
+      "shield": "https://s.sde.globo.com/media/organizations/2019/05/13/YpirangaRSSVG.svg",
+      "mascot": "Canário",
+      "localization": "Erechim"
+    },
+    {
+      "name": "Esporte Clube São José",
+      "foundation": 1913,
+      "shield": "https://s.sde.globo.com/media/organizations/2019/01/03/S%C3%A3o_Jos%C3%A9-RS-01.svg",
+      "mascot": "São José",
+      "localization": "Porto Alegre"
+    },
+    {
+      "name": "Clube do Remo",
+      "foundation": 1905,
+      "shield": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
+      "mascot": "Leão",
+      "localization": "Belém"
+    },
+    {
+      "name": "Manaus Futebol Clube",
+      "foundation": 2013,
+      "shield": "https://s.sde.globo.com/media/organizations/2013/12/04/ManausFutebolClube65.png",
+      "mascot": "Gavião-real",
+      "localization": "Manaus"
+    },
+    {
+      "name": "Associação Desportiva Confiança",
+      "foundation": 1936,
+      "shield": "https://s.sde.globo.com/media/organizations/2019/09/10/Confianca.svg",
+      "mascot": "Dragão",
+      "localization": "Aracaju"
+    },
+    {
+      "name": "Floresta Esporte Clube",
+      "foundation": 1954,
+      "shield": "https://s.sde.globo.com/media/organizations/2015/11/11/floresta65.png",
+      "mascot": "Lobo",
+      "localization": "Fortaleza"
+    },
+    {
+      "name": "Associação Atlética de Altos",
+      "foundation": 2013,
+      "shield": "https://s.sde.globo.com/media/organizations/2018/04/26/Altos-65.png",
+      "mascot": "Jacaré",
+      "localization": "Altos"
+    },
+    {
+      "name": "Futebol Clube Atlético Cearense",
+      "foundation": 1997,
+      "shield": "https://s.sde.globo.com/media/teams/2018/12/10/ace65.png",
+      "mascot": "Águia",
+      "localization": "Fortaleza"
+    },
+    {
+      "name": "Grêmio Esportivo Brasil",
+      "foundation": 1911,
+      "shield": "https://s.sde.globo.com/media/organizations/2018/03/11/brasil-de-pelotas.svg",
+      "mascot": "Índio Xavante",
+      "localization": "Pelotas"
+    },
+    {
+      "name": "Ferroviário Atlético Clube",
+      "foundation": 1933,
+      "shield": "https://s.sde.globo.com/media/organizations/2019/10/10/ferroviario_65_2.png",
+      "mascot": "Tubarão",
+      "localization": "Fortaleza"
+    },
+    {
+      "name": "Campinense Clube",
+      "foundation": 1915,
+      "shield": "https://s.sde.globo.com/media/teams/2020/01/14/Campinense-PB.svg",
+      "mascot": "Raposa",
+      "localization": "Campina Grande"
+    }
+  ]
