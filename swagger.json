@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "API Times da Serie A de 2022",
-    "description": "API para CRUD de Times da Serie A de 2022",
+    "title": "API Times da Serie A,B,C e D de 2022",
+    "description": "API para CRUD de Times da Serie A,B,C e D de 2022",
     "termsOfService": "",
     "contact": {
       "email": "uri.dantas@hotmail.com"
