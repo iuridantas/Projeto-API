@@ -25,6 +25,11 @@ module.exports = (req, res, next) => {
   }
 
   jwt.verify(token, process.env.SECRET, async (err, decoded) => {
+    
+    if (!decoded) {
+      return res.status(401).send({ message: 'Token não existe!' });
+    }
+
     const user = await findByIdUserService(decoded.id);
 
     if (err || !user || !user.id) {
